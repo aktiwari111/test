@@ -8,12 +8,12 @@
             <div class="article-metadata">
               <a class="mr-2" href="#">Hind Gyanodaya</a>
               <small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
-            </div>
+            
             <h2><a class="article-title" href="{% url 'post-detail' post.id %}">{{ post.title }}</a></h2>
             
             {% if post.image %}
             
-            <img src="{{ post.image.url }}" class="rounded  img-thumbnail" alt="Responsive image">
+            <img src="{{ post.image.url }}" class="img-thumbnail" alt="Responsive image">
             {% endif %}
             <!-- <p class="article-content">{{ post.content }}</p> -->
             
@@ -25,6 +25,7 @@
            
              
             {% endif %}
+            </div>
           </div>
         </article>
     {% endfor %}
