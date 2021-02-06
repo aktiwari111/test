@@ -2,6 +2,7 @@
 
 {% block content %}
     {% for post in posts %}
+    <span class="border border-dark">
         <article class="media content-section">
           <img class="rounded-circle article-img" src="{{ post.profile.url }}">
           <div class="media-body">
@@ -13,7 +14,7 @@
             
             {% if post.image %}
             
-            <img src="{{ post.image.url }}" class="img-thumbnail" alt="Responsive image">
+            <img src="{{ post.image.url }}" class="rounded img-thumbnail" alt="Responsive image">
             {% endif %}
             <!-- <p class="article-content">{{ post.content }}</p> -->
             
@@ -28,6 +29,7 @@
             </div>
           </div>
         </article>
+        </span>
     {% endfor %}
 
 
