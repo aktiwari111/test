@@ -5,8 +5,7 @@ from django.urls import reverse
 
 
 class Post(models.Model):
-    profile = models.ImageField(
-        default='default.jpg', upload_to='profile_pics')
+
     title = models.CharField(max_length=100)
     content = models.TextField(null=True, blank=True)
     date_posted = models.DateTimeField(default=timezone.now)

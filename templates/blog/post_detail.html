@@ -1,7 +1,7 @@
 {% extends "blog/base.html" %}
 {% block content %}
   <article class="media content-section">
-    <img class="rounded-circle article-img" src="{{ post.profile.url }}">
+    <!-- <img class="rounded-circle article-img" src="{{ post.profile.url }}"> -->
     <div class="media-body">
       <div class="article-metadata">
         <a class="mr-2" href="#">Hind Gyanodaya</a>
@@ -11,16 +11,17 @@
       <h2 class="article-title">{{ object.title }}</h2>
 
         {% if post.image %}
-        
+        <picture>
         <img src="{{ post.image.url }}" class="img-fluid" alt="Responsive image">
+        </picture>
         {% endif %}
 
       <p class="article-content">{{ object.content }}</p>
       {% if post.link %}
       
-      <iframe width="500" height="250" src={{ post.link }} frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="{{ post.link }}"></iframe>
+      </div>
       
       
       {% endif %}
