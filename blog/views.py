@@ -34,3 +34,23 @@ class PostDetailView(DetailView):
 
 def about(request):
     return render(request, 'blog/about.html', {'title': 'About'})
+
+
+def technicalcourses(request):
+    u1 = "https://source.unsplash.com/1600x900/?technology"
+    u2 = "https://source.unsplash.com/1600x900/?machine"
+    u3 = "https://source.unsplash.com/1600x900/?science"
+    u4 = "https://source.unsplash.com/1600x900/?computer"
+    u5 = "https://source.unsplash.com/1600x900/?science"
+    u6 = "https://source.unsplash.com/1600x900/?coding"
+    ls = [u1,u2,u3,u4,u5,u6]
+    return render(request, 'blog/technical_courses.html', {'urls': ls})
+
+
+def front(request):
+    u1 = "https://source.unsplash.com/1600x900/?technology"
+    u2 = "https://source.unsplash.com/1600x900/?machine,child"
+    u3 = "https://source.unsplash.com/1600x900/?school,science"
+    ls = [u1, u2, u3]
+    
+    return render(request, 'blog/front.html', {'urls': ls})
